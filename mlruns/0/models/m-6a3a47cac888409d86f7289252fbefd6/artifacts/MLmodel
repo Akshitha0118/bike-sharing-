@@ -1,0 +1,22 @@
+artifact_path: file:c:/Users/Admin/Desktop/bike sharing project/mlruns/0/models/m-6a3a47cac888409d86f7289252fbefd6/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+mlflow_version: 3.8.1
+model_id: m-6a3a47cac888409d86f7289252fbefd6
+model_size_bytes: 54876
+model_uuid: m-6a3a47cac888409d86f7289252fbefd6
+prompts: null
+run_id: 49d35d7634e24785bf93bf7b5d0d2423
+utc_time_created: '2026-01-31 14:31:29.685969'
