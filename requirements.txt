@@ -3,3 +3,4 @@ python
 pandas
 numpy
 mlflow
+sklearn
