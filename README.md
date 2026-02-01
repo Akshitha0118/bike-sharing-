@@ -43,7 +43,54 @@ The app looks for the following models in the MLflow registry:
 - Target column: `cnt`
 - Features: all remaining columns
 
-You can replace the dataset path with your own CSV file.
 
-```python
-df = pd.read_csv("path/to/your/dataset.csv")
+
+df = pd.read_csv("day.csv")
+
+
+## 🛠️ Tech Stack
+
+Python
+
+Streamlit
+
+MLflow
+
+Scikit-learn
+
+Pandas
+
+NumPy
+
+Matplotlib
+
+## ▶️ How to Run the App
+
+### 1️⃣ Install Dependencies
+pip install -r requirements.txt
+
+### 2️⃣ Start MLflow Tracking Server (if not running)
+mlflow ui
+
+### 3️⃣ Run the Streamlit App
+streamlit run app.py
+
+## 📊 App Preview
+
+- Select a regression model from the sidebar
+
+- View performance metrics instantly
+
+- Analyze prediction accuracy visually
+
+- Compare models efficiently
+
+## 📌 Use Cases
+
+- Model comparison & evaluation
+
+- MLflow model registry visualization
+
+- Regression performance analysis
+
+- MLOps demos and portfolios
