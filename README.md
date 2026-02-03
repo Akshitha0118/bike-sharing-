@@ -87,8 +87,8 @@ An interactive **Streamlit web app** is built to:
 ## ⚙️ Installation & Setup
 
 #### 1️⃣ Clone the Repository
-git clone https://github.com/your-username/bike-demand-prediction.git
-cd bike-demand-prediction
+[git clone https://github.com/your-username/bike-demand-prediction.git](https://github.com/Akshitha0118/End-To-End-Bike-Rental-Management-System-MLOps)
+
 ---
 
 #### 2️⃣ Install Dependencies
