@@ -1,96 +1,131 @@
-# bike-sharing-
-# 📊 MLflow Regression Models Dashboard (Streamlit)
+# 🚲 End-To-End-Bike-Rental-Management-System-MLOps
 
-An interactive **Streamlit web application** that loads multiple **MLflow-registered regression models**, evaluates them on a dataset, and visualizes their performance using standard regression metrics and plots.
 
-This app allows you to **compare models in real time** directly from the MLflow Model Registry.
+## 📌 Project Overview
 
----
+The rapid growth of bike-sharing systems has led to the generation of large volumes of data related to **weather conditions, temporal patterns, and user behavior**. Accurately predicting bike rental demand is critical for:
 
-## 🚀 Features
+- Optimizing bike distribution and resource allocation  
+- Improving customer satisfaction  
+- Reducing operational and maintenance costs  
 
-- 🔗 Load models directly from **MLflow Model Registry**
-- 📈 Compare multiple regression models
-- 📊 View evaluation metrics:
-  - R² Score
-  - Mean Absolute Error (MAE)
-  - Mean Squared Error (MSE)
-  - Accuracy-like percentage (R² × 100)
-- 📉 Actual vs Predicted scatter plot
-- 📋 Sample predictions table
-- ⚡ Fast loading with Streamlit caching
+This project builds an **end-to-end machine learning regression system** to predict the **total number of bike rentals (`cnt`)** using historical data and multiple influencing factors.
 
 ---
 
-## 🧠 Models Supported
+## 🎯 Problem Statement
 
-The app looks for the following models in the MLflow registry:
+Bike rental demand is affected by a combination of:
 
-- LinearRegression
-- RandomForestRegressor
-- GradientBoostingRegressor
-- KNeighborsRegressor
-- SVR
-- LGBMRegressor
+- 🌦 **Weather conditions**: temperature, humidity, windspeed  
+- 📆 **Temporal patterns**: season, month, weekday, working day  
+- 🎉 **External factors**: holidays, weather situations  
 
-> ⚠️ If a model is not found in MLflow, a warning is shown in the UI.
+The challenge is to design a **robust regression-based ML pipeline** that can effectively learn these patterns and deliver accurate predictions.
 
 ---
 
-## 📂 Dataset
+## ✅ Project Objectives
 
-- Example dataset: **Bike Sharing Dataset**
-- Target column: `cnt`
-- Features: all remaining columns
+- Perform **data preprocessing and exploratory data analysis (EDA)**
+- Train and compare multiple **regression models**
+- Evaluate models using multiple performance metrics
+- Track experiments, metrics, and models using **MLflow**
+- Register and load the **best-performing model**
+- Build an **interactive Streamlit application** for predictions and visualization
+
+---
+
+## 🤖 Machine Learning Models Used
+
+The following regression models are trained and evaluated:
+
+- Linear Regression  
+- Random Forest Regressor  
+- Gradient Boosting Regressor  
+- K-Nearest Neighbors (KNN) Regressor  
+- Support Vector Regressor (SVR)  
+- LightGBM Regressor (LGBM)  
+
+---
+
+## 📊 Model Evaluation Metrics
+
+Each model is evaluated using:
+
+- **R² Score**
+- **Adjusted R²**
+- **Mean Absolute Error (MAE)**
+- **Mean Squared Error (MSE)**
+- **Root Mean Squared Error (RMSE)**
+- **Accuracy-like Metric** → `R² × 100`
+
+---
+
+## 🧪 Experiment Tracking with MLflow
+
+This project leverages **MLflow** to ensure reproducibility and experiment tracking:
+
+- Logs model parameters
+- Tracks evaluation metrics
+- Stores trained models
+- Registers the best-performing model
+- Enables model loading for deployment
+
+---
+
+## 🌐 Streamlit Application
+
+An interactive **Streamlit web app** is built to:
+
+- Input environmental and temporal features
+- Predict bike rental demand in real time
+- Visualize predictions and model performance
+- Load models directly from MLflow Registry
+
+---
+## ⚙️ Installation & Setup
+
+#### 1️⃣ Clone the Repository
+git clone https://github.com/your-username/bike-demand-prediction.git
+cd bike-demand-prediction
+---
+
+#### 2️⃣ Install Dependencies
+pip install -r requirements.txt
+---
+
+#### 3️⃣ Run MLflow UI
+mlflow ui
 
 
+Access at: http://localhost:5000
+---
+#### 4️⃣ Run the Streamlit App
+streamlit run app.py
+---
 
-df = pd.read_csv("day.csv")
+## 📈 Expected Outcomes
 
+Identify the best-performing regression model for bike demand prediction
+
+Understand feature importance impacting bike rentals
+
+Enable reproducible ML workflows using MLflow
+
+Deliver a deployable Streamlit interface for real-time predictions
+---
 
 ## 🛠️ Tech Stack
 
 Python
 
-Streamlit
+Scikit-learn
+
+LightGBM
 
 MLflow
 
-Scikit-learn
+Streamlit
 
-Pandas
-
-NumPy
-
-Matplotlib
-
-## ▶️ How to Run the App
-
-### 1️⃣ Install Dependencies
-pip install -r requirements.txt
-
-### 2️⃣ Start MLflow Tracking Server (if not running)
-mlflow ui
-
-### 3️⃣ Run the Streamlit App
-streamlit run app.py
-
-## 📊 App Preview
-
-- Select a regression model from the sidebar
-
-- View performance metrics instantly
-
-- Analyze prediction accuracy visually
-
-- Compare models efficiently
-
-## 📌 Use Cases
-
-- Model comparison & evaluation
-
-- MLflow model registry visualization
-
-- Regression performance analysis
-
-- MLOps demos and portfolios
+Pandas, NumPy, Matplotlib, Seaborn
